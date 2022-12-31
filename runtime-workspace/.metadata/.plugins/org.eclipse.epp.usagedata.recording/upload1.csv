@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vm.info,sysinfo,,,"mixed mode",1273581894853
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1273581894853
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1273581894853
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1273581894853
+java.vm.specification.version,sysinfo,,,"1.0",1273581894853
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1273581894853
+java.vm.version,sysinfo,,,"14.3-b01",1273581894853
+started,bundle,org.eclipse.epp.usagedata.ui,1.1.0.R200906100410,"org.eclipse.epp.usagedata.ui",1273581895867
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1273581896632
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1273581910502
+opened,editor,FITool,2.0.0,"FITool.strEditor",1273581913307
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273581913349
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1273581916637
+started,bundle,org.eclipse.jst.servlet.ui,1.1.301.v200908101600,"org.eclipse.jst.servlet.ui",1273581916789
+opened,editor,FITool,2.0.0,"FITool.strEditor",1273581920852
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273581920862
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1273581925837
+opened,editor,FITool,2.0.0,"FITool.mapEditor",1273581926387
+activated,editor,FITool,2.0.0,"FITool.mapEditor",1273581926399
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273581937490
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1273582001536
+opened,editor,FITool,2.0.0,"FITool.mapEditor",1273582004873
+activated,editor,FITool,2.0.0,"FITool.mapEditor",1273582004888
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1273582016093
+opened,editor,FITool,2.0.0,"FITool.strEditor",1273582016306

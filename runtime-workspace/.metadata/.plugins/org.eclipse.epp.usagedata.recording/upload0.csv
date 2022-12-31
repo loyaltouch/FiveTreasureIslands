@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.sse.core,1.1.401.v200909172215,"org.eclipse.wst.sse.core",1273581894838
+started,bundle,org.eclipse.wst.validation,1.2.102.v200905201610,"org.eclipse.wst.validation",1273581894838
+started,bundle,org.eclipse.wst.web,1.1.301.v200909021400,"org.eclipse.wst.web",1273581894838
+started,bundle,org.eclipse.wst.ws.service.policy.ui,1.0.102.v200903070248,"org.eclipse.wst.ws.service.policy.ui",1273581894838
+started,bundle,org.eclipse.wst.xml.core,1.1.401.v200908242115,"org.eclipse.wst.xml.core",1273581894838
+started,bundle,eclipseme.core,1.7.9,"eclipseme.core",1273581894838
+started,bundle,eclipseme.core.hooks,1.6.5,"eclipseme.core.hooks",1273581894838
+started,bundle,eclipseme.ui,1.7.8,"eclipseme.ui",1273581894838
+started,bundle,org.eclipse.epp.usagedata.gathering,1.1.0.R200906100410,"org.eclipse.epp.usagedata.gathering",1273581894853
+started,bundle,org.eclipse.epp.usagedata.recording,1.1.0.R200906100410,"org.eclipse.epp.usagedata.recording",1273581894853
+started,bundle,org.eclipse.jdt.core,3.5.2.v_981_R35x,"org.eclipse.jdt.core",1273581894853
+started,bundle,org.eclipse.jdt.ui,3.5.2.r352_v20100106-0800,"org.eclipse.jdt.ui",1273581894853
+started,bundle,org.eclipse.team.cvs.ui,3.3.202.r35x_20090930-0800,"org.eclipse.team.cvs.ui",1273581894853
+os,sysinfo,,,"win32",1273581894853
+arch,sysinfo,,,"x86",1273581894853
+ws,sysinfo,,,"win32",1273581894853
+locale,sysinfo,,,"ja_JP",1273581894853
+processors,sysinfo,,,"8",1273581894853
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1273581894853
+java.runtime.version,sysinfo,,,"1.6.0_17-b04",1273581894853
+java.specification.name,sysinfo,,,"Java Platform API Specification",1273581894853
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1273581894853
+java.specification.version,sysinfo,,,"1.6",1273581894853
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1273581894853
+java.version,sysinfo,,,"1.6.0_17",1273581894853

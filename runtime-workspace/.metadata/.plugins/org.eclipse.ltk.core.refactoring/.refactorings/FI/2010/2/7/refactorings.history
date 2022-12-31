@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="リソース名 &apos;FI/02.mapEvent.str&apos; を &apos;02mapEvent.str&apos; に変更します" description="リソース &apos;02.mapEvent.str&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="02.mapEvent.str" name="02mapEvent.str" stamp="1265859652354" updateReferences="true"/>
+</session>

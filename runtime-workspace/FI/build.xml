@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="buildFI_jar" default="build">
+	<property file="build.properties"/>
+
+	<!-- #### テスト ##### -->
+	<target name="hello">
+		<echo message="hello, world" />
+	</target>
+
+	<!-- #### FI.jarファイルの作成と配置 #### -->
+	<target name="build">
+		<antcall target="initsave" />
+		<antcall target="init" />
+		<antcall target="submapsave"/>
+		<antcall target="makeversion" />
+		<antcall target="toWork" />
+		<antcall target="adaptMacro" />
+		<antcall target="7zip" />
+		<antcall target="deploy" />
+		<antcall target="showversion" />
+	</target>
+
+	<target name="initsave">
+		<java classname="tool.InitialDataMaker" classpath="${tool.dir.name}">
+			<arg value="${soruce.dir.name}/" />
+			<arg value="init.txt" />
+			<arg value="members.data" />
+			<arg value="items.data" />
+			<arg value="init.sav" />
+		</java>
+	</target>
+
+	<target name="init">
+		<delete dir="${work.dir.name}" />
+		<mkdir dir="${work.dir.name}" />
+		<delete dir="${macrowork.dir.name}" />
+		<mkdir dir="${macrowork.dir.name}" />
+	</target>
+
+	<target name="submapsave">
+		<java classname="tool.Packer" classpath="${tool.dir.name}">
+			<arg value="${soruce.dir.name}/submap"/>
+			<arg value="${soruce.dir.name}"/>
+		</java>
+	</target>
+
+	<target name="makeversion">
+		<java classname="tool.CreateVersionFile" classpath="${tool.dir.name}">
+			<arg value="${project.dir.name}/src/FICanvas.java"/>
+			<arg value="${soruce.dir.name}/ver"/>
+			<arg value="${soruce.dir.name}/.ver"/>
+		</java>
+	</target>
+
+	<target name="showversion">
+		<java classname="tool.ShowVersion" classpath="${tool.dir.name}">
+			<arg value="${soruce.dir.name}/.ver"/>
+		</java>
+	</target>
+
+	<target name="toWork">
+		<copy todir="${work.dir.name}">
+			<fileset dir="${soruce.dir.name}">
+				<!-- マスタデータ -->
+				<include name="members.data" />
+				<include name="items.data" />
+				<include name="magics.str" />
+				<include name="chips.gif" />
+				<include name="init.sav" />
+				<include name="maptexts.str" />
+				<include name="raft.data" />
+				<include name="master.enemy" />
+				<include name="pack.submap" />
+				<include name="pack.submaplen" />
+				<include name=".ver" />
+				<!-- マップデータ -->
+				<include name="*.chip" />
+				<include name="*.enm" />
+				<include name="*.map" />
+				<include name="*.spot" />
+				<include name="*.eptn" />
+			</fileset>
+		</copy>
+
+		<copy todir="${macrowork.dir.name}">
+			<fileset dir="${soruce.dir.name}">
+				<exclude name="mevents.str" />
+				<include name="*mapEvent.str" />
+				<include name="*mevents.str" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="adaptMacro">
+		<java classname="tool.MacroAdapter" classpath="${tool.dir.name}">
+			<arg value="${macrowork.dir.name}" />
+			<arg value="${work.dir.name}" />
+			<arg value="${soruce.dir.name}/macro.table" />
+		</java>
+
+		<java classname="tool.MacroAdapter" classpath="${tool.dir.name}">
+			<arg value="${soruce.dir.name}/menuevents.str" />
+			<arg value="${work.dir.name}/menuevents.str" />
+			<arg value="${soruce.dir.name}/macro.table" />
+			<arg value="16" />
+		</java>
+
+		<java classname="tool.MacroAdapter" classpath="${tool.dir.name}">
+			<arg value="${soruce.dir.name}/mevents.str" />
+			<arg value="${work.dir.name}/mevents.str" />
+			<arg value="${soruce.dir.name}/macro.table" />
+			<arg value="40" />
+		</java>
+	</target>
+
+	<target name="7zip">
+		<exec executable="${7z.dir.name}/7z" dir="${work.dir.name}">
+			<arg value="a" />
+			<arg value="-tzip" />
+			<arg value="FI.jar"/>
+			<arg value="${work.dir.name}/*"/>
+		</exec>
+	</target>
+
+	<target name="deploy">
+		<copy
+			todir="${project.dir.name}/bin"
+			file="${work.dir.name}/FI.jar"
+			overwrite="true"
+		/>
+	</target>
+
+	<!-- #### DoJaのコンパイル(未完成) #### -->
+	<target name="buildgame">
+		<antcall target="compile" />
+		<antcall target="preverify" />
+		<antcall target="jar" />
+	</target>
+
+	<target name="compile">
+		<javac
+			srcdir="${src.dir.name.local}"
+			destdir="${bin.dir.name.local}"
+			classpath="${doja.dir.name}/lib/classes.zip;${doja.dir.name}/lib/doja_classes.zip"
+			debug="off" />
+	</target>
+
+	<target name="preverify">
+		<exec executable="${doja.home.name}/bin/preverify.exe" failonerror="true">
+			<arg value="-classpath" />
+			<arg value="${doja.dir.name}/lib/classes.zip;${doja.dir.name}/lib/doja_classes.zip" />
+			<arg value="-d" />
+			<arg value="'${preverified.dir.name.local}'" />
+			<arg value="'${bin.dir.name.local}'" />
+		</exec>
+	</target>
+
+	<target name="jar">
+		<jar destfile="${bin.dir.name.local}/${jar.file.name.local}"
+			basedir="${class.dir.name.local}"
+			includes="**/*.class"
+			/>
+	</target>
+
+	<!-- #### DoJaフォルダを開く ##### -->
+	<target name="openDoJa">
+		<parallel>
+			<antcall target="openDojaBin" />
+			<antcall target="openDojaDir" />
+		</parallel>
+	</target>
+
+	<target name="openDojaBin">
+		<exec executable="${doja.home.name}/bin/doja.exe" />
+	</target>
+
+	<target name="openDojaDir">
+		<exec executable="explorer" dir="${doja.dir.name}">
+			<arg value="bin" />
+		</exec>
+	</target>
+
+	<!-- #### FI.jarファイルをワークフォルダに展開 #### -->
+	<target name="unbuild">
+		<unzip src="${project.dir.name}/bin/FI.jar" dest="${work.dir.name}" />
+	</target>
+</project>

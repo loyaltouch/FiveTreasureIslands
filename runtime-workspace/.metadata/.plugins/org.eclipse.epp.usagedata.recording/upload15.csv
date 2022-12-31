@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vm.info,sysinfo,,,"mixed mode",1273584745581
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1273584745581
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1273584745581
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1273584745581
+java.vm.specification.version,sysinfo,,,"1.0",1273584745581
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1273584745581
+java.vm.version,sysinfo,,,"14.3-b01",1273584745581
+opened,editor,FITool,2.0.0,"FITool.strEditor",1273584753818
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273584753862
+activated,editor,FITool,2.0.0,"FITool.mapEditor",1273584763974
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273584775632
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1273584792410
+opened,editor,FITool,2.0.0,"FITool.mapEditor",1273584800854
+activated,editor,FITool,2.0.0,"FITool.mapEditor",1273584800890
+opened,editor,FITool,2.0.0,"FITool.chipEditor",1273584829761
+activated,editor,FITool,2.0.0,"FITool.chipEditor",1273584829801
+opened,editor,FITool,2.0.0,"FITool.strEditor",1273584834246
+activated,editor,FITool,2.0.0,"FITool.strEditor",1273584834282
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1273584867832
+activated,editor,FITool,2.0.0,"FITool.chipEditor",1273584871170
+activated,editor,FITool,2.0.0,"FITool.mapEditor",1273584878613
+activated,editor,FITool,2.0.0,"FITool.chipEditor",1273584882146
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1273584892393
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1273584898490
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1273584904084

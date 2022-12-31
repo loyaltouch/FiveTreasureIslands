@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="リソース名 &apos;FI/99.mapEvent.str&apos; を &apos;99mapEvent.str&apos; に変更します" description="リソース &apos;99.mapEvent.str&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="99.mapEvent.str" name="99mapEvent.str" stamp="1265126055466" updateReferences="true"/>&#x0A;<refactoring comment="リソース名 &apos;FI/99mapEvent.str&apos; を &apos;01mapEvent.str&apos; に変更します" description="リソース &apos;99mapEvent.str&apos; の名前変更" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="99mapEvent.str" name="01mapEvent.str" stamp="1265203862155" updateReferences="true"/>
+</session>
